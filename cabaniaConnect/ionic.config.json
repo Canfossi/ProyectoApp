@@ -1,0 +1,7 @@
+{
+  "name": "cabaniaConnect",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
