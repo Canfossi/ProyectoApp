@@ -48,7 +48,26 @@ export class RegistroPage implements OnInit {
 
          await alert.present();
          return;
+      }else{
+        if (this.formularioRegistro.valid){
+          const alert =await this.alertController.create({
+            header: 'Registro completado',
+            message: '¡Tu registro se ha completado con éxito!',
+            buttons: [
+            {
+              text: 'OK',
+              handler: () => {
+                // Redirige al usuario a la página de inicio de sesión
+                this.navCtrl.navigateForward('/login');
+              }
+            }
+          ]
+          });
+          await alert.present();
+        
       }
+
+
 
       var usuario ={
         nombres: f.nombres,
@@ -61,4 +80,5 @@ export class RegistroPage implements OnInit {
 
       localStorage.setItem('usuario',JSON.stringify(usuario));
     }
+}
 }
