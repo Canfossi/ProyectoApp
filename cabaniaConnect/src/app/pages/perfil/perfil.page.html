@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="danger">
-    <ion-title>perfil</ion-title>
+    <ion-title>Perfil</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -10,7 +10,55 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">perfil</ion-title>
+      <ion-title size="large">Perfil</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Información del usuario ficticio -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información Personal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-text>Jane Doe</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Correo Electrónico:</ion-label>
+          <ion-text>jane.doe@example.com</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Teléfono:</ion-label>
+          <ion-text>(123) 456-7890</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Reservas de cabañas ficticias -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Reservas de Cabañas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Fecha de Check-In:</ion-label>
+          <ion-text>15 de octubre de 2023</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fecha de Check-Out:</ion-label>
+          <ion-text>18 de octubre de 2023</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cabaña Reservada:</ion-label>
+          <ion-text>Cabaña Acogedora en el Bosque</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+
