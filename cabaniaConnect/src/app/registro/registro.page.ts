@@ -92,9 +92,9 @@ export class RegistroPage implements OnInit {
 
 
       var usuario ={
-        nombres: f.nombres,
+        username: f.nombres,
         apellidoCompleto: f.apellidoCompleto,
-        correo: f.correo,
+        email: f.correo,
         password: f.password,
         confirmarPassword: f.confirmarPassword,
         telefono: f.telefono
