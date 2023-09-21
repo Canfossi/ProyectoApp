@@ -13,4 +13,23 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+  username: string = '';
+  usercorreo: string = '';
+
+  ngOnInit() {
+
+    // Recupera el dato de 'username' del LocalStorage
+    const userDataString = localStorage.getItem('userData');
+    if (userDataString !== null) {
+      const userData = JSON.parse(userDataString);
+      this.username = userData.username;
+      this.usercorreo = userData.email;
+    }
+  }
+
+}
+
+
+
