@@ -14,7 +14,17 @@ import { AlertController, NavController } from '@ionic/angular';
 
 
 export class RegistroPage implements OnInit {
-  formularioRegistro:FormGroup;
+ formularioRegistro:FormGroup;
+
+ 
+  userData = {
+    username: '',
+    password: '',
+    email: ''
+  };
+  
+  
+ 
 
   constructor(public fb: FormBuilder,
     public alertController:AlertController,
@@ -33,7 +43,19 @@ export class RegistroPage implements OnInit {
   }
 
   ngOnInit() {
+    const storedUserDataString = localStorage.getItem('userData');
+
+    if (storedUserDataString) {
+      const storedUserData = JSON.parse(storedUserDataString);
+      console.log('Datos en localStorage:', storedUserData);
+    } else {
+      console.log('No hay datos en localStorage.');
+    }
   }
+  
+
+
+
      async guardar(){
       //AQUI SE VALIDA SI EL FORMULARIO ESTA PARA GUARDAR
       var f= this.formularioRegistro.value;
