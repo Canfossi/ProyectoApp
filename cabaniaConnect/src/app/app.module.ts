@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 })
 export class AppModule {
 
-  userName = localStorage.getItem("userName");
+ userName = localStorage.getItem("userName");
 
   ngOnInit() {
 
