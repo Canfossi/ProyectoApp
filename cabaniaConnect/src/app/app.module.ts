@@ -15,18 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 })
 export class AppModule {
 
-  username: string = '';
-  usercorreo: string = '';
+  userName = localStorage.getItem("userName");
 
   ngOnInit() {
 
     // Recupera el dato de 'username' del LocalStorage
-    const userDataString = localStorage.getItem('userData');
-    if (userDataString !== null) {
-      const userData = JSON.parse(userDataString);
-      this.username = userData.username;
-      this.usercorreo = userData.email;
-    }
+    
   }
 
 }
