@@ -8,7 +8,7 @@ import { AlertController,NavController } from '@ionic/angular';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-
+  userName = localStorage.getItem("userName");
   constructor(
     private alertCtrl: AlertController,//controlar alerts
     private navCtrl: NavController,

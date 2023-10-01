@@ -5,6 +5,7 @@ import{
   Validators,
   FormBuilder
 }from'@angular/forms';
+import { Router } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
@@ -13,12 +14,12 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  userName: string = "";
   formularioLogin: FormGroup;
 
   constructor(public fb: FormBuilder,
     public alertController:AlertController,
-    public navCtrl:NavController) { 
+    public navCtrl:NavController,private router: Router) { 
     
     this.formularioLogin = this.fb.group({
       'username':new FormControl("",Validators.required),
@@ -33,6 +34,10 @@ export class LoginPage implements OnInit {
 
  
   async ingresar() {
+
+    localStorage.setItem('userName' , this.userName);
+    
+
     var f = this.formularioLogin.value;
     var usuarioString = localStorage.getItem('usuario');
     if (usuarioString !== null) {

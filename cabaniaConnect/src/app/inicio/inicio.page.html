@@ -5,10 +5,13 @@
   <img class="out" src="assets/img/out.png" ><ion-button  (click)="presentAlert()"  class="cerrar"alt="end"></ion-button>
 </ion-buttons>
     <ion-buttons slot="start">
-     
+      
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
+  <h3>
+    {{userName}}
+  </h3>
 </ion-header>
 
 <ion-content [fullscreen]="true">
