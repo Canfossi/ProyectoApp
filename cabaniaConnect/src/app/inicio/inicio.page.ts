@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController,NavController } from '@ionic/angular';
 
 @Component({
@@ -10,13 +11,18 @@ export class InicioPage implements OnInit {
 
   constructor(
     private alertCtrl: AlertController,//controlar alerts
-    private navCtrl: NavController,//controlar los links
+    private navCtrl: NavController,
+    private router: Router//controlar los links
     
   ) {}
 
   ngOnInit(): void {
 
     
+  }
+  
+  doLogOut() {
+    this.router.navigate(['/login'])
   }
 
   async presentAlert() {
@@ -35,8 +41,8 @@ export class InicioPage implements OnInit {
           text: 'OK',
           handler: () => {
             console.log('Cerrar sesión');
-            localStorage.removeItem('user'); // Verifica que esto esté funcionando
-            this.navCtrl.navigateForward('/login'); // Redirecciona a la página de inicio de sesión
+            localStorage.removeItem('user');
+            this.navCtrl.navigateForward('/login'); 
           },
         },
       ],

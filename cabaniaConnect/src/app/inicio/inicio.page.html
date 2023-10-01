@@ -1,9 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="success">
     <ion-title >INICIO</ion-title>
-    <ion-icon name="cart-outline" slot="end"></ion-icon>
+<ion-buttons slot="end">
+  <img class="out" src="assets/img/out.png" ><ion-button  (click)="presentAlert()"  class="cerrar"alt="end"></ion-button>
+</ion-buttons>
     <ion-buttons slot="start">
-      <ion-item> <img class="out" src="assets/img/out.png" ><ion-button  (click)="presentAlert()"  class="cerrar"alt="end">cerrar sesion</ion-button></ion-item>
+     
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>

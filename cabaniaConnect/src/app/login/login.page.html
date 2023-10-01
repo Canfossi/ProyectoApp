@@ -1,12 +1,14 @@
 <ion-header >
   <ion-toolbar color="primary">
-    <ion-title>Bienvenido</ion-title>
+    
+    <ion-img src="assets/cabanias/cabanaconnect.png" alt="Descripción de la imagen" id="img"></ion-img>
   </ion-toolbar>
 </ion-header>
 
-<img src="assets/cabanias/cabanaconnect.png" alt="Descripción de la imagen">
+
 
 <ion-content>
+  <div>
   <ion-card>
     <ion-card-header>
       <ion-card-title>Inicio de sesión</ion-card-title>
@@ -30,13 +32,13 @@
 
     </ion-card-content>
   </ion-card>
-
+</div>
 </ion-content> 
 
   <ion-footer>
     <ion-toolbar color="primary">
       <ion-buttons slot="end">
-        <ion-button [routerLink]="['/registro']">
+        <ion-button [routerLink]="['/registro']" id="btn-registro">
           Registrarse
         </ion-button>
       </ion-buttons>
