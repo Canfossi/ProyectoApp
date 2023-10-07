@@ -1,79 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="tertiary">
-    <ion-title>Reserva</ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
-    </ion-buttons>
+  <ion-toolbar>
+    <div class="container-text"><ion-title class="title-pag"><p class="title-pag">Recordatorios</p></ion-title></div>
+    <ion-button [routerLink]="['/inicio']" class="CancelarBoton">
+      Cancelar
+    </ion-button>
+    <ion-button [routerLink]="['/home-page']" class="AceptaBoton">
+      Guardar
+    </ion-button>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Perfil</ion-title>
+      <ion-title class="container-text"size="large">Reserva de cabania</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <!-- Información del usuario ficticio -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Información Personal</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-label>Nombre:</ion-label>
-          <ion-text>Carlo Anfossi</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Correo Electrónico:</ion-label>
-          <ion-text>Carlo.anfossi@duocuc.cl</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Teléfono:</ion-label>
-          <ion-text>(123) 456-7890</ion-text>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+<br><br>
+<!--INICIO recordatorio-->
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Titulo"></ion-input>
+      </ion-item> 
+      
+  <br><br>
+   <!--categoria recordatorio-->
+   <ion-list>
+    <ion-item>
+      <ion-input label="Cantidad de dias"></ion-input>
+    </ion-item> 
+    
+    <!--categoria recordatorio-->
+    </ion-list>
+<ion-item>Elige fecha y hora</ion-item>
 
-  <!-- Reservas de cabañas ficticias con más detalles -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Reservas Cabañas</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-label>Fecha de Check-In:</ion-label>
-          <ion-text>15 de octubre de 2023</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Fecha de Check-Out:</ion-label>
-          <ion-text>18 de octubre de 2023</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Cabaña Reservada:</ion-label>
-          <ion-text>Cabaña Morada</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Número de Adultos:</ion-label>
-          <ion-text>2 adultos</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Número de Niños:</ion-label>
-          <ion-text>1 niño</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Servicios Adicionales:</ion-label>
-          <ion-text>Piscina privada, Desayuno incluido</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label>Precio Total:</ion-label>
-          <ion-text>$300</ion-text>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+  </ion-list>
+<!--FIN recordatorio-->
 
-</ion-content>
+
+  <!--Fecha y hora-->
+  <div class="containerFecha">
+    <ion-datetime locale="es-ES"></ion-datetime>
+  </div>
+ <!--Fecha y hora-->
+
+

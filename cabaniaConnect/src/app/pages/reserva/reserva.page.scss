@@ -1,0 +1,31 @@
+.AceptaBoton{
+    top: 10px; /* Ajusta la posición vertical según sea necesario */
+    right: 10px; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 10; /* Ajusta el índice z si es necesario */
+    position: absolute;
+    width: 85px;
+
+}
+.title-pag{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CancelarBoton{
+    top: 10px; /* Ajusta la posición vertical según sea necesario */
+    left: 10px; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 10; /* Ajusta el índice z si es necesario */
+    position: absolute;
+    width: 85px;
+}
+.container-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerFecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
